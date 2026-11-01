@@ -348,3 +348,17 @@ button:disabled{opacity:.65;cursor:progress}
  .hero-art h1{font-size:9.65vw}
 }
 @media(prefers-reduced-motion:reduce){.hero-cta{transition:none}}
+
+/* QR Code do protótipo — cores e tipografia da identidade Agend.ai */
+.prototype-qr-section{background:var(--cream);padding:76px 0 88px}
+.prototype-qr-layout{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;justify-content:space-between;gap:40px;max-width:1050px}
+.prototype-qr-layout h2{margin:0;color:var(--purple);font-size:clamp(43px,5.5vw,76px);line-height:1.01;letter-spacing:-.035em}
+.prototype-qr-link{display:block;width:min(100%,345px);padding:12px;background:#fff;border:2px solid var(--ink);border-radius:22px}
+.prototype-qr-link img{display:block;width:100%;height:auto;aspect-ratio:1/1}
+.prototype-qr-link:focus-visible{outline:3px solid var(--ink);outline-offset:5px}
+@media(max-width:700px){
+ .prototype-qr-section{padding:60px 0 70px}
+ .prototype-qr-layout{grid-template-columns:1fr;justify-items:center;gap:28px}
+ .prototype-qr-layout h2{text-align:center;font-size:clamp(42px,10vw,64px)}
+ .prototype-qr-link{width:min(100%,310px)}
+}
