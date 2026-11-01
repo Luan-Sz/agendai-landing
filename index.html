@@ -18,7 +18,7 @@
   <div class="wrap nav-inner">
     <a href="#inicio" class="nav-mark" aria-label="Agenda.ai — início"><img src="logo-full-dark.svg" alt="Agenda.ai"></a>
     <nav aria-label="Navegação principal"><a href="#proposta">Proposta</a><a href="#experiencia">Experiência</a><a href="#planos">Planos</a></nav>
-    <a href="#planos" class="nav-link-cta">Conhecer planos ↗</a>
+    <a href="#planos" class="nav-link-cta">Ver planos ↗</a>
   </div>
 </header>
 <main id="conteudo">
@@ -89,8 +89,8 @@
   <section class="features-section">
     <div class="wrap">
       <div class="features-header">
-        <h2>Menos rigidez.<br>Mais leveza.</h2>
-        <p>O Agenda.ai foi pensado para explorar uma organização mais simples, mais flexível e mais humana.</p>
+        <h2>Organizar sem<br>se cobrar.</h2>
+        <p>Três ideias para tornar sua rotina mais clara: menos etapas, adaptação aos imprevistos e progresso sem pressão.</p>
       </div>
       <div class="features-grid">
         <article class="feature-card">
@@ -119,7 +119,7 @@
           <span class="section-kicker">Pesquisa de interesse</span>
           <h2>Seu ritmo.<br>Seu plano.</h2>
         </div>
-        <p>Escolha o plano que faz mais sentido para você. O clique registra interesse e leva para a lista de espera. Ainda não existe cobrança real.</p>
+        <p>Compare as opções e escolha a que combina com sua rotina. Em seguida, você poderá entrar na lista de espera, sem pagar nada.</p>
       </div>
 
       <div class="plans-grid">
@@ -132,8 +132,8 @@
             <li>Concluir atividades e acompanhar progresso</li>
             <li>Elementos básicos de gamificação</li>
           </ul>
-          <button type="button" class="button plan-button" data-plan-button="free">Registrar interesse ↗</button>
-          <p class="plan-count" data-count="free">Consultando interesse…</p>
+          <button type="button" class="button plan-button" data-plan-button="free" aria-label="Escolher plano Free, gratuito">Escolher Free ↗</button>
+          <p class="plan-count">Sem cobrança nesta etapa</p>
         </article>
 
         <article class="plan-card plan-standard">
@@ -145,8 +145,8 @@
             <li>Uso de voz dentro do app</li>
             <li>Fluxo mais rápido para registrar tarefas</li>
           </ul>
-          <button type="button" class="button plan-button" data-plan-button="standard">Registrar interesse ↗</button>
-          <p class="plan-count" data-count="standard">Consultando interesse…</p>
+          <button type="button" class="button plan-button" data-plan-button="standard" aria-label="Escolher plano Standard, preço hipotético de R$ 9,90 por mês">Escolher Standard ↗</button>
+          <p class="plan-count">Preço ilustrativo · sem cobrança</p>
         </article>
 
         <article class="plan-card plan-premium">
@@ -158,12 +158,13 @@
             <li>Enviar tarefas por voz e texto no WhatsApp</li>
             <li>Integração planejada com o app automaticamente</li>
           </ul>
-          <button type="button" class="button plan-button" data-plan-button="premium">Registrar interesse ↗</button>
-          <p class="plan-count" data-count="premium">Consultando interesse…</p>
+          <button type="button" class="button plan-button" data-plan-button="premium" aria-label="Escolher plano Premium, preço hipotético de R$ 19,90 por mês">Escolher Premium ↗</button>
+          <p class="plan-count">Preço ilustrativo · sem cobrança</p>
         </article>
       </div>
 
-      <p class="pricing-note">Os preços e recursos acima fazem parte de um experimento de validação. Ao clicar, você não será cobrado(a).</p>
+      <p class="pricing-note">Os preços e recursos fazem parte de um teste de interesse e podem mudar. Nenhum pagamento será solicitado.</p>
+      <p class="pricing-config-note" id="waitlist-availability" role="status" hidden></p>
     </div>
   </section>
 
@@ -200,6 +201,7 @@
     <p>Protótipo de landing page para validação de interesse.</p>
     <small>© <span id="year"></span> Agenda.ai</small>
     <a href="privacidade.html">Política de privacidade</a>
+    <button type="button" id="analytics-preferences" class="footer-preferences" hidden>Preferências de análise</button>
   </div>
 </footer>
 </body>

@@ -283,3 +283,21 @@ h1,h2,h3,.reference-name,.button,.plan-top{font-family:'Fliper','Fliper SemiBold
 .analytics-actions button{border:2px solid var(--ink);border-radius:999px;padding:9px 13px;background:transparent;color:var(--ink);font-weight:800}
 .analytics-actions button[data-consent=yes]{background:var(--ink);color:var(--cream)}
 @media(max-width:620px){.analytics-consent{flex-direction:column;align-items:stretch}.analytics-actions button{flex:1}}
+
+
+/* Melhorias de UX e acessibilidade — preserva a identidade da marca */
+html{scroll-padding-top:86px}
+#inicio,#proposta,#experiencia,#planos{scroll-margin-top:86px}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,.demo-task:focus-within{outline:3px solid var(--ink);outline-offset:4px}
+.reference-nav{position:sticky;top:0;z-index:40}
+.nav-link-cta,.plan-button,.button,.back-link{transition:transform .15s ease,filter .15s ease}
+@media(hover:hover){.nav-link-cta:hover,.plan-button:hover,.button:hover{transform:translateY(-2px);filter:brightness(1.08)}}
+button:disabled{opacity:.65;cursor:progress}
+.demo-task:focus-within{outline-offset:2px}
+.plan-card{transition:transform .18s ease,box-shadow .18s ease}
+@media(hover:hover){.plan-card:hover{transform:translateY(-3px);box-shadow:0 8px 0 rgba(24,14,48,.12)}}
+.pricing-config-note{max-width:750px;margin:18px auto 0;padding:14px 18px;border:2px solid var(--ink);border-radius:16px;background:var(--lav);font-size:14px;line-height:1.45;text-align:center}
+.footer-preferences{border:0;background:none;color:var(--cream);padding:4px;text-decoration:underline;font-size:13px}
+[hidden]{display:none!important}
+.success-box:focus{outline:none}
+@media(prefers-reduced-motion:reduce){.nav-link-cta,.plan-button,.button,.plan-card{transition:none}}
