@@ -23,15 +23,20 @@
 </header>
 <main id="conteudo">
   <section id="inicio" class="reference-hero" aria-labelledby="hero-title">
-    <div class="reference-canvas">
-      <img class="reference-cutout" src="hero-contour.svg" alt="" aria-hidden="true">
-      <img class="reference-hero-logo" src="logo-hero.svg" alt="Símbolo Agenda.ai">
-      <span class="reference-name">Agend.ai</span>
-      <h1 id="hero-title">Você vive<br>a vida.<br>A agenda<br>se adapta.</h1>
-      <div class="reference-hero-copy">
-        <p>Sua rotina não precisa caber<br>em um planejamento perfeito.</p>
-        <p>A proposta do Agenda.ai<br>é ajudar a organizar tarefas<br><strong>conforme o seu dia acontece.</strong></p>
-        <p class="reference-highlight">menos cobrança e pequenas<br>conquistas pelo caminho.</p>
+    <div class="hero-stage wrap">
+      <div class="hero-side">
+        <img class="hero-emblem" src="logo-hero.svg" alt="Símbolo do Agend.ai" width="280" height="280">
+        <div class="hero-side-copy">
+          <p>Sua rotina não precisa caber em um planejamento perfeito.</p>
+          <p>A proposta do Agend.ai é ajudar a organizar tarefas <strong>conforme o seu dia acontece.</strong></p>
+          <p class="hero-soft-line">Menos cobrança e pequenas conquistas pelo caminho.</p>
+        </div>
+        <a class="hero-cta" href="#planos">Conhecer os planos <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-art">
+        <img class="hero-art-contour" src="hero-contour.svg" alt="" aria-hidden="true">
+        <span class="hero-art-brand">Agend.ai</span>
+        <h1 id="hero-title">Você vive<br>a vida.<br>A agenda<br>se adapta.</h1>
       </div>
     </div>
   </section>
@@ -119,51 +124,40 @@
           <span class="section-kicker">Pesquisa de interesse</span>
           <h2>Seu ritmo.<br>Seu plano.</h2>
         </div>
-        <p>Compare as opções e escolha a que combina com sua rotina. Em seguida, você poderá entrar na lista de espera, sem pagar nada.</p>
+        <p>Dois modos de acompanhar sua rotina. Ambos funcionam pelo WhatsApp; a diferença está no limite de tokens e nos recursos. Escolha uma opção para demonstrar interesse, sem pagar agora.</p>
       </div>
 
-      <div class="plans-grid">
+      <div class="plans-grid plans-grid-two">
         <article class="plan-card plan-free">
           <div class="plan-top"><span>Free</span><span>01</span></div>
           <h3>Grátis</h3>
-          <p class="plan-lead">Para começar com o essencial.</p>
+          <p class="plan-lead">Para começar de forma leve, com tokens que se renovam diariamente.</p>
           <ul>
-            <li>Adicionar tarefas no app</li>
-            <li>Concluir atividades e acompanhar progresso</li>
-            <li>Elementos básicos de gamificação</li>
+            <li>Uso pelo WhatsApp e pela interface do Agend.ai</li>
+            <li>Franquia diária de tokens</li>
+            <li>Organização de tarefas, rotina flexível e gamificação</li>
+            <li>Ao atingir o limite diário, faça upgrade para continuar com mais recursos</li>
           </ul>
           <button type="button" class="button plan-button" data-plan-button="free" aria-label="Escolher plano Free, gratuito">Escolher Free ↗</button>
           <p class="plan-count">Sem cobrança nesta etapa</p>
         </article>
 
-        <article class="plan-card plan-standard">
-          <div class="plan-top"><span>Standard</span><span>02</span></div>
-          <h3>R$ 9,90 <small>/mês</small></h3>
-          <p class="plan-lead">Mais praticidade no dia a dia.</p>
-          <ul>
-            <li>Tudo do plano Free</li>
-            <li>Uso de voz dentro do app</li>
-            <li>Fluxo mais rápido para registrar tarefas</li>
-          </ul>
-          <button type="button" class="button plan-button" data-plan-button="standard" aria-label="Escolher plano Standard, preço hipotético de R$ 9,90 por mês">Escolher Standard ↗</button>
-          <p class="plan-count">Preço ilustrativo · sem cobrança</p>
-        </article>
-
         <article class="plan-card plan-premium">
-          <div class="plan-top"><span>Premium</span><span>03</span></div>
+          <div class="plan-top"><span>Premium</span><span>02</span></div>
           <h3>R$ 19,90 <small>/mês</small></h3>
-          <p class="plan-lead">Organização também pelo WhatsApp.</p>
+          <p class="plan-lead">Mais capacidade para acompanhar sua rotina todos os dias.</p>
           <ul>
-            <li>Tudo do plano Standard</li>
-            <li>Enviar tarefas por voz e texto no WhatsApp</li>
-            <li>Integração planejada com o app automaticamente</li>
+            <li>Uso pelo WhatsApp e pela interface do Agend.ai</li>
+            <li>Franquia mensal de tokens</li>
+            <li>Recursos de áudio e métricas de acompanhamento</li>
+            <li>Opção planejada de comprar tokens adicionais ao atingir o limite</li>
           </ul>
           <button type="button" class="button plan-button" data-plan-button="premium" aria-label="Escolher plano Premium, preço hipotético de R$ 19,90 por mês">Escolher Premium ↗</button>
           <p class="plan-count">Preço ilustrativo · sem cobrança</p>
         </article>
       </div>
 
-      <p class="pricing-note">Os preços e recursos fazem parte de um teste de interesse e podem mudar. Nenhum pagamento será solicitado.</p>
+      <p class="pricing-note">Os preços, recursos e limites de tokens são hipóteses para validação; as quantidades ainda não foram definidas. Nenhum pagamento será solicitado.</p>
       <p class="pricing-config-note" id="waitlist-availability" role="status" hidden></p>
     </div>
   </section>
@@ -183,8 +177,12 @@
           <p>Não. O clique apenas registra interesse e direciona você para uma lista de espera opcional.</p>
         </details>
         <details>
-          <summary>O WhatsApp vai funcionar integrado?</summary>
-          <p>Essa é uma das funcionalidades em validação para o plano Premium.</p>
+          <summary>O WhatsApp vai funcionar em quais planos?</summary>
+          <p>A integração com o WhatsApp está prevista tanto no Free quanto no Premium. Os recursos de áudio estão previstos no Premium.</p>
+        </details>
+        <details>
+          <summary>Como funcionam os limites de tokens?</summary>
+          <p>O Free terá tokens de uso diário e o Premium terá uma franquia mensal. As quantidades e regras exatas ainda estão em validação; a compra de tokens extras é uma possibilidade planejada para o Premium.</p>
         </details>
         <details>
           <summary>O que acontece ao entrar na lista de espera?</summary>

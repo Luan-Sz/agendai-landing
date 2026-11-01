@@ -36,4 +36,4 @@ No VS Code, abra esta pasta e execute `py -m http.server 8000` no terminal. O si
 
 ## Observações
 
-Esta versão preserva o visual mais recente, os três planos e a demo de gamificação. Não inclui backend e **não** possui contagem pública em tempo real. Não use GitHub Pages como serviço para processar pagamentos ou hospedar aplicativo SaaS em produção.
+Esta versão preserva o visual mais recente, os dois planos e a demo de gamificação. Não inclui backend e **não** possui contagem pública em tempo real. Não use GitHub Pages como serviço para processar pagamentos ou hospedar aplicativo SaaS em produção.
