@@ -2,7 +2,6 @@
   'use strict';
   const plans = {
     free: { name: 'Free', price: 'Grátis' },
-    standard: { name: 'Standard', price: 'R$ 9,90/mês*' },
     premium: { name: 'Premium', price: 'R$ 19,90/mês*' }
   };
   const chosen = new URLSearchParams(window.location.search).get('plano');

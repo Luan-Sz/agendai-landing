@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const plans = ['free', 'standard', 'premium'];
+  const plans = ['free', 'premium'];
   const endpoint = (window.AGENDAAI_CONFIG?.formspreeEndpoint || '').trim();
   const isConfigured = /^https:\/\/formspree\.io\/f\/[a-z0-9]+$/i.test(endpoint);
 
