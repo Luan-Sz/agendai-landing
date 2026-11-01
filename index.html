@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f0ba60">
+  <meta name="description" content="Agenda.ai: você vive a vida. A agenda se adapta. Uma proposta de organização flexível, com interface amigável e elementos de gamificação.">
+  <title>Agenda.ai — Você vive a vida. A agenda se adapta.</title>
+  <link rel="icon" type="image/svg+xml" href="logo-symbol.svg">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="config.js"></script>
+  <script defer src="analytics.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="reference-nav">
+  <div class="wrap nav-inner">
+    <a href="#inicio" class="nav-mark" aria-label="Agenda.ai — início"><img src="logo-full-dark.svg" alt="Agenda.ai"></a>
+    <nav aria-label="Navegação principal"><a href="#proposta">Proposta</a><a href="#experiencia">Experiência</a><a href="#planos">Planos</a></nav>
+    <a href="#planos" class="nav-link-cta">Conhecer planos ↗</a>
+  </div>
+</header>
+<main id="conteudo">
+  <section id="inicio" class="reference-hero" aria-labelledby="hero-title">
+    <div class="reference-canvas">
+      <img class="reference-cutout" src="hero-contour.svg" alt="" aria-hidden="true">
+      <img class="reference-hero-logo" src="logo-hero.svg" alt="Símbolo Agenda.ai">
+      <span class="reference-name">Agend.ai</span>
+      <h1 id="hero-title">Você vive<br>a vida.<br>A agenda<br>se adapta.</h1>
+      <div class="reference-hero-copy">
+        <p>Sua rotina não precisa caber<br>em um planejamento perfeito.</p>
+        <p>A proposta do Agenda.ai<br>é ajudar a organizar tarefas<br><strong>conforme o seu dia acontece.</strong></p>
+        <p class="reference-highlight">menos cobrança e pequenas<br>conquistas pelo caminho.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="proposta" class="reference-intro">
+    <div class="reference-intro-inside">
+      <img src="logo-full-dark.svg" alt="Agenda.ai" class="reference-intro-logo">
+      <div class="reference-statement"><h2>Organização que<br>acompanha você.</h2></div>
+    </div>
+  </section>
+
+  <section class="reference-purple">
+    <div class="reference-purple-content">
+      <p>Uma proposta para quem já<br>tentou seguir listas e horários<br>perfeitos, mas viu a vida real<br>mudar os planos. Sem refazer<br>tudo do zero a cada imprevisto.</p>
+    </div>
+    <div class="reference-fringe" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  </section>
+
+  <section id="experiencia" class="reference-mint">
+    <div class="reference-mint-inside">
+      <div class="reference-geometric-shape one" aria-hidden="true"></div>
+      <div class="reference-geometric-shape two" aria-hidden="true"></div>
+      <h2>Você vive<br>a vida.<br>A agenda<br>se adapta.</h2>
+      <div class="reference-mint-logo"><img src="logo-full-dark.svg" alt="Agenda.ai"></div>
+    </div>
+  </section>
+
+  <section class="demo-section" aria-labelledby="demo-heading">
+    <div class="wrap demo-section-grid">
+      <div class="demo-section-copy">
+        <span class="section-kicker">A IDEIA NA PRÁTICA</span>
+        <h2 id="demo-heading">Menos rigidez.<br>Mais leveza.</h2>
+        <p>Uma interface amigável, conquistas que valorizam seu progresso e uma proposta de rotina capaz de acompanhar mudanças.</p>
+      </div>
+      <div class="demo-stage">
+        <span class="demo-sticker sticker-first">nova tarefa</span>
+        <div class="demo-window">
+          <div class="demo-head"><div class="demo-logo"><img src="logo-full-dark.svg" alt="Agenda.ai"></div><span class="demo-live">protótipo visual</span></div>
+          <div class="demo-greeting"><span>Interface amigável</span><strong>Vamos de um passo por vez?</strong></div>
+          <div class="demo-progress-top"><span id="demo-message">1 de 3 tarefas concluídas</span><span id="demo-score">★ 20 pontos</span></div>
+          <div class="progress-track" role="progressbar" aria-label="Progresso de tarefas" aria-valuemin="0" aria-valuemax="3" aria-valuenow="1" id="demo-progress"><div class="progress-fill" id="demo-bar"></div></div>
+          <div class="demo-tasks">
+            <label class="demo-task checked"><input class="demo-check" type="checkbox" data-task="0" checked><span class="check-ui" aria-hidden="true">✓</span><span class="task-content"><strong>Responder mensagens</strong><small>09:00 · Concluída</small></span><span class="task-star">★</span></label>
+            <label class="demo-task"><input class="demo-check" type="checkbox" data-task="1"><span class="check-ui" aria-hidden="true">✓</span><span class="task-content"><strong>Organizar as contas</strong><small id="task-shift-time">16:00 · Planejada</small></span><span class="task-star">★</span></label>
+            <label class="demo-task"><input class="demo-check" type="checkbox" data-task="2"><span class="check-ui" aria-hidden="true">✓</span><span class="task-content"><strong>Dar uma pausa</strong><small>18:00 · Planejada</small></span><span class="task-star">★</span></label>
+          </div>
+          <div class="adaptation"><div><span class="adapt-label">SURGIU UM IMPREVISTO?</span><strong id="adapt-feedback" role="status">A rotina pode mudar com você.</strong><small id="adapt-slot">Próxima tarefa às 16:00</small></div><button id="adapt-toggle" type="button" aria-pressed="false">Testar ajuste ↗</button></div>
+        </div>
+        <span class="sticker-bottom">+1 conquista!</span>
+        <p class="demo-disclaimer">Demonstração visual do conceito. A adaptação automática e as integrações ainda estão em validação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="wrap">
+      <div class="features-header">
+        <h2>Menos rigidez.<br>Mais leveza.</h2>
+        <p>O Agenda.ai foi pensado para explorar uma organização mais simples, mais flexível e mais humana.</p>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card">
+          <span class="feature-number">01</span>
+          <h3>Interface amigável</h3>
+          <p>Uma proposta visual mais leve, para registrar o que importa sem transformar organização em peso.</p>
+        </article>
+        <article class="feature-card alt">
+          <span class="feature-number">02</span>
+          <h3>Rotina flexível</h3>
+          <p>Quando o dia muda, a experiência pode acompanhar sua rotina sem exigir que você reconstrua tudo do zero.</p>
+        </article>
+        <article class="feature-card mint">
+          <span class="feature-number">03</span>
+          <h3>Gamificação útil</h3>
+          <p>Pequenas conquistas, progresso e estímulos visuais para valorizar o que foi feito — sem cobrança excessiva.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="planos" class="pricing-section">
+    <div class="wrap pricing-wrap">
+      <div class="pricing-header">
+        <div>
+          <span class="section-kicker">Pesquisa de interesse</span>
+          <h2>Seu ritmo.<br>Seu plano.</h2>
+        </div>
+        <p>Escolha o plano que faz mais sentido para você. O clique registra interesse e leva para a lista de espera. Ainda não existe cobrança real.</p>
+      </div>
+
+      <div class="plans-grid">
+        <article class="plan-card plan-free">
+          <div class="plan-top"><span>Free</span><span>01</span></div>
+          <h3>Grátis</h3>
+          <p class="plan-lead">Para começar com o essencial.</p>
+          <ul>
+            <li>Adicionar tarefas no app</li>
+            <li>Concluir atividades e acompanhar progresso</li>
+            <li>Elementos básicos de gamificação</li>
+          </ul>
+          <button type="button" class="button plan-button" data-plan-button="free">Registrar interesse ↗</button>
+          <p class="plan-count" data-count="free">Consultando interesse…</p>
+        </article>
+
+        <article class="plan-card plan-standard">
+          <div class="plan-top"><span>Standard</span><span>02</span></div>
+          <h3>R$ 9,90 <small>/mês</small></h3>
+          <p class="plan-lead">Mais praticidade no dia a dia.</p>
+          <ul>
+            <li>Tudo do plano Free</li>
+            <li>Uso de voz dentro do app</li>
+            <li>Fluxo mais rápido para registrar tarefas</li>
+          </ul>
+          <button type="button" class="button plan-button" data-plan-button="standard">Registrar interesse ↗</button>
+          <p class="plan-count" data-count="standard">Consultando interesse…</p>
+        </article>
+
+        <article class="plan-card plan-premium">
+          <div class="plan-top"><span>Premium</span><span>03</span></div>
+          <h3>R$ 19,90 <small>/mês</small></h3>
+          <p class="plan-lead">Organização também pelo WhatsApp.</p>
+          <ul>
+            <li>Tudo do plano Standard</li>
+            <li>Enviar tarefas por voz e texto no WhatsApp</li>
+            <li>Integração planejada com o app automaticamente</li>
+          </ul>
+          <button type="button" class="button plan-button" data-plan-button="premium">Registrar interesse ↗</button>
+          <p class="plan-count" data-count="premium">Consultando interesse…</p>
+        </article>
+      </div>
+
+      <p class="pricing-note">Os preços e recursos acima fazem parte de um experimento de validação. Ao clicar, você não será cobrado(a).</p>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="wrap faq-wrap">
+      <div>
+        <h2>Perguntas<br>importantes.</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>O Agenda.ai já está disponível?</summary>
+          <p>Ainda não. Esta página apresenta a proposta e mede interesse nos planos e recursos.</p>
+        </details>
+        <details>
+          <summary>Vou pagar ao selecionar um plano?</summary>
+          <p>Não. O clique apenas registra interesse e direciona você para uma lista de espera opcional.</p>
+        </details>
+        <details>
+          <summary>O WhatsApp vai funcionar integrado?</summary>
+          <p>Essa é uma das funcionalidades em validação para o plano Premium.</p>
+        </details>
+        <details>
+          <summary>O que acontece ao entrar na lista de espera?</summary>
+          <p>Seu contato fica salvo para avisos futuros sobre o andamento da proposta.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <img src="logo-full-cream.svg" alt="Agenda.ai" class="footer-logo">
+    <p>Protótipo de landing page para validação de interesse.</p>
+    <small>© <span id="year"></span> Agenda.ai</small>
+    <a href="privacidade.html">Política de privacidade</a>
+  </div>
+</footer>
+</body>
+</html>
