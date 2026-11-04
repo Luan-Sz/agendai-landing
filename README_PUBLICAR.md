@@ -1,39 +1,71 @@
-# Agenda.ai — versão para GitHub Pages (SEM Python)
+# Publicação e configuração — Agend.ai
 
-Esta pasta contém a landing page ESTÁTICA. O `server.py` e o banco SQLite da versão local não funcionam no GitHub Pages.
+Este documento é um **guia operacional** da landing page estática. Para apresentação do projeto, recursos e limitações, consulte o [README principal](./README.md).
 
-## Publicar sem terminal/Git
+## Publicar no GitHub Pages
 
-1. Crie um repositório no GitHub, por exemplo `agendai-landing` (no plano gratuito, público).
-2. Entre no repositório → **Add file** → **Upload files**.
-3. Envie os arquivos da **raiz desta pasta**, inclusive `index.html`, `style.css`, `app.js`, `config.js`, `analytics.js`, `reserva.html`, `reserva.js` e os `.svg`. NÃO envie a pasta como uma única subpasta.
-4. Clique **Commit changes**.
-5. Entre em **Settings → Pages → Build and deployment → Deploy from a branch**.
-6. Escolha `main` e `/(root)` → **Save**.
-7. Aguarde a publicação e veja o endereço exibido em **Settings → Pages**.
+O projeto usa apenas HTML, CSS e JavaScript. Não há etapa de compilação nem servidor de backend.
 
-O endereço normalmente terá o formato: `https://SEU_USUARIO.github.io/agendai-landing/`.
+1. No repositório do GitHub, abra **Settings → Pages**.
+2. Em **Build and deployment**, escolha **Deploy from a branch**.
+3. Selecione a branch `main`, pasta `/(root)`, e salve.
+4. Aguarde o GitHub disponibilizar o endereço do site em **Pages**.
+5. Confirme se `index.html`, `reserva.html` e os arquivos SVG carregam corretamente.
 
-## Manter o experimento funcionando
+Se o Pages já estiver configurado, alterações enviadas à branch publicada são implantadas pelo fluxo de publicação do GitHub.
 
-**A seleção de um plano** abre `reserva.html?plano=free`, `standard` ou `premium`.
+**Atenção:** GitHub Pages publica arquivos estáticos. Ele não executa Python, SQLite, Java, Node.js como servidor, nem serviços de IA no backend.
 
-**Cliques agregados**: crie uma propriedade Google Analytics 4, adicione um fluxo Web, pegue o ID `G-XXXXXXXXXX` e preencha `ga4MeasurementId` no `config.js`. Após permitir a medição, os cliques em planos são registrados como evento personalizado `plano_escolhido`, com parâmetro `plano`. Os números não são exibidos publicamente na landing. Dados do GA4 podem demorar para aparecer nos relatórios e não substituem cliques confirmados no backend.
+## Executar localmente
 
-**Lista de espera**: crie um formulário em https://formspree.io/, obtenha o endereço público `https://formspree.io/f/SEU_ID` e preencha `formspreeEndpoint` no `config.js`. A página só exibe inscrição confirmada após o serviço aceitar o envio. Antes da configuração, a inscrição fica desabilitada e explica o motivo.
+É possível abrir `index.html` diretamente no navegador. Como alternativa, se Python estiver instalado:
 
-**Painel Admin**: o endereço `/admin.html` apenas orienta sobre onde consultar os dados de GA4 e Formspree. Não é possível usar o painel Python/SQLite antigo no GitHub Pages.
+```bash
+python -m http.server 8000
+```
 
-## Privacidade
+No Windows, você pode usar `py -m http.server 8000`. Acesse `http://localhost:8000/`.
 
-- Atualize `privacidade.html` com contato verdadeiro do grupo e informações corretas de processamento antes de coletar e-mails reais.
-- Não coloque nenhuma senha, credencial, token de serviço secreto ou banco de dados no repositório.
-- A medição GA4 foi configurada para iniciar somente após consentimento do visitante.
+## Planos e lista de espera
 
-## Testar localmente (sem Python server.py)
+Existem **somente dois planos demonstrativos**: `free` e `premium`. O botão de cada plano leva a:
 
-No VS Code, abra esta pasta e execute `py -m http.server 8000` no terminal. O site abrirá em `http://localhost:8000/`.
+- `reserva.html?plano=free`
+- `reserva.html?plano=premium`
 
-## Observações
+**Não há pagamento.** Preços e franquias de tokens são hipóteses de validação.
 
-Esta versão preserva o visual mais recente, os dois planos e a demo de gamificação. Não inclui backend e **não** possui contagem pública em tempo real. Não use GitHub Pages como serviço para processar pagamentos ou hospedar aplicativo SaaS em produção.
+O formulário só recebe cadastros se um endpoint válido do **Formspree** estiver configurado em `config.js`. Com o campo vazio, o envio permanece desabilitado e a página explica a indisponibilidade. Antes de coletar e-mails de usuários reais, revise a página `privacidade.html` e defina o responsável pelos dados e o canal de contato.
+
+## Medição de interesse
+
+O código prevê o Google Analytics 4 (GA4) como integração **opcional**.
+
+1. Crie uma propriedade e um fluxo Web no GA4.
+2. Adicione o ID de medição (formato `G-XXXXXXXXXX`) em `config.js`.
+3. Verifique o aviso de consentimento e aceite ou recusa antes de validar a coleta.
+4. O evento configurado para escolha de plano é `plano_escolhido`, com o parâmetro `plano`.
+
+Com o ID vazio, **nenhuma medição GA4 é iniciada**. O código não dispõe de métricas próprias no servidor. Mesmo configurado, o GA4 só recebe eventos quando o visitante consente e não deve ser tratado como um banco de conversões confirmadas.
+
+## Página administrativa
+
+`admin.html` **não é um painel com login, banco ou relatórios internos**. A página informa que as métricas devem ser consultadas no GA4 e as inscrições, no Formspree, caso esses serviços sejam configurados.
+
+## Segurança e privacidade
+
+- `config.js` é público: **não insira senhas, tokens privados ou credenciais**.
+- Revise o aviso de privacidade, contatos responsáveis e procedimentos de exclusão antes da coleta real.
+- Não utilize a página estática para processar pagamentos ou armazenar informações confidenciais.
+- Teste o fluxo de consentimento de análise e o formulário antes de divulgar a página como pesquisa ativa.
+
+## Checklist antes de compartilhar
+
+- [ ] Layout e navegação funcionando no celular e computador
+- [ ] Botões Free e Premium abrindo a opção correta
+- [ ] Simulação de tarefas e de imprevisto funcionando
+- [ ] Link externo do QR Code verificado
+- [ ] Avisos de funcionalidade demonstrativa visíveis
+- [ ] Se houver coleta real: Formspree, GA4, consentimento e privacidade revisados
+
+**Limite do protótipo:** este repositório não implementa agenda persistente, IA generativa, integração com WhatsApp, pagamentos ou backend.
